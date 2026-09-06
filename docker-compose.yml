@@ -1,0 +1,18 @@
+services:
+  collector:
+    build: ./collector
+    env_file: .env
+    volumes:
+      - bloom-data:/data
+      - ./config.yaml:/app/config.yaml:ro
+    restart: unless-stopped
+  ui:
+    build: ./ui
+    ports:
+      # Override the host port when 8080 is taken: UI_PORT=9090 docker compose up
+      - "${UI_PORT:-8080}:80"
+    depends_on:
+      - collector
+    restart: unless-stopped
+volumes:
+  bloom-data:

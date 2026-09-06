@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>os-bloom</title>
+  <link rel="stylesheet" href="vendor/uplot/uPlot.min.css">
+  <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+  <header>
+    <span class="brand">OS-BLOOM</span>
+    <span id="clock" class="muted"></span>
+    <span id="banner" class="banner hidden"></span>
+  </header>
+  <nav class="tab-row">
+    <a href="#/mkt" data-tab-link="mkt">MKT</a>
+    <a href="#/defi" data-tab-link="defi">DEFI</a>
+    <a href="#/risk" data-tab-link="risk">RISK</a>
+    <a href="#/econ" data-tab-link="econ">ECON</a>
+    <a href="#/credit" data-tab-link="credit">CREDIT</a>
+    <a href="#/profit" data-tab-link="profit">PROFIT</a>
+    <a href="#/pos" data-tab-link="pos">POS</a>
+  </nav>
+  <main class="grid" data-tab="mkt">
+    <section class="col-left">
+      <div class="panel" id="panel-equity">
+        <div class="panel-title">EQTY</div>
+        <div class="panel-body"></div>
+        <div class="panel-foot muted"></div>
+      </div>
+      <div class="panel" id="panel-bonds">
+        <div class="panel-title">WORLD BONDS</div>
+        <div class="panel-body"></div>
+        <div class="panel-foot muted"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-macro">
+      <div class="panel-title">MACRO — THIS WEEK</div>
+      <div class="panel-body"></div>
+      <div class="panel-foot muted"></div>
+    </section>
+    <section class="panel" id="panel-news">
+      <div class="panel-title">TOP NEWS</div>
+      <div class="panel-body"></div>
+      <div class="panel-foot muted"></div>
+    </section>
+  </main>
+  <main class="grid grid-defi hidden" data-tab="defi">
+    <section class="panel" id="panel-defi">
+      <div class="panel-title"><span id="defi-view-title">CURATED VAULTS — USDC</span><span class="view-toggle"><a data-view="vaults" class="active">VAULTS</a><a data-view="markets">MARKETS</a></span></div>
+      <div class="panel-body"></div>
+      <div class="panel-foot muted"></div>
+    </section>
+    <section class="col-right">
+      <div class="panel" id="panel-midnight">
+        <div class="panel-title">MIDNIGHT — USDC FIXED TERM</div>
+        <div class="panel-body"></div>
+        <div class="panel-foot muted"></div>
+      </div>
+      <div class="panel" id="panel-refs">
+        <div class="panel-title">RATE REFS</div>
+        <div class="panel-body"></div>
+        <div class="panel-foot muted"></div>
+      </div>
+    </section>
+  </main>
+  <main class="grid grid-cycle hidden" data-tab="risk" id="cycle-risk"></main>
+  <main class="grid grid-cycle hidden" data-tab="econ" id="cycle-econ"></main>
+  <main class="grid grid-cycle hidden" data-tab="credit" id="cycle-credit"></main>
+  <main class="grid grid-cycle hidden" data-tab="profit" id="cycle-profit"></main>
+  <main class="grid grid-cycle hidden" data-tab="pos" id="cycle-pos"></main>
+  <div id="chart-overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <div class="overlay-head"><span id="chart-title"></span><button id="chart-close">✕</button></div>
+      <div id="chart-root"></div>
+    </div>
+  </div>
+  <script src="vendor/uplot/uPlot.iife.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

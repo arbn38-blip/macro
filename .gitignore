@@ -1,0 +1,22 @@
+# secrets — never commit these
+.env
+*.pem
+secrets/
+
+# local tooling / editor state
+.claude/
+.worktrees/
+.DS_Store
+.idea/
+.vscode/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# data
+*.sqlite3
+*.db
