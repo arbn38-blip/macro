@@ -10,7 +10,9 @@ that promise — free, keyless where possible, and polite to upstreams.
    is the only credential a user should ever need, and the aim is to drop even
    that if a keyless equivalent appears. An optional integration that most
    users cannot enable is not a feature — it is a tax on everyone who reads the
-   code. See "Why no brokerage integration?" in the README for the precedent.
+   code. An optional Interactive Brokers path was built and then removed on
+   exactly these grounds: it delivered data flagged just as delayed as the free
+   source, while threading a parameter through every fetcher signature.
 2. **Be polite to upstreams**, and treat these three as hard rules — a PR that
    breaks one will not be merged:
    - **Never impersonate a browser.** Use `http.USER_AGENT`. If an endpoint

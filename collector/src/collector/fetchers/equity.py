@@ -4,7 +4,7 @@
 proof-of-work wall; it returned HTTP 200 with an HTML challenge body rather
 than an error, so it failed at parse time and never served a quote. Removed
 2026-09-06 along with an optional IBKR path that returned data flagged just as
-delayed as Yahoo's -- see "Why no brokerage integration?" in the README.)
+delayed as Yahoo's, for no gain.)
 
 Writes daily closes to series 'idx:{symbol}' and the latest quotes to the
 'equity_quotes' doc: {symbol: {last, ts, source, delayed}}.

@@ -2,15 +2,22 @@
 
 # os-bloom
 
-**A self-hosted macro and markets terminal that runs entirely on free data sources.**
+**A self-hosted macro and markets terminal that runs entirely on free data
+sources — built AI-first.**
 
 No Bloomberg seat, no paid vendors, no brokerage account —
 one free FRED API key is the only credential you need.
+
+Written largely by AI agents, directed and reviewed by a human. That is the
+point rather than a disclaimer: os-bloom is both a working terminal and an
+experiment in how far AI-assisted development carries a real system — one with
+live upstreams, awkward data, and decisions that have to be defended.
 
 [![License](https://img.shields.io/badge/license-MIT-f5a623?style=flat-square)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.12+-5f9ea0?style=flat-square)
 ![Tests](https://img.shields.io/badge/tests-188%20passing-4c9a2a?style=flat-square)
 ![Paid data sources](https://img.shields.io/badge/paid%20data%20sources-0-f5a623?style=flat-square)
+![Built AI-first](https://img.shields.io/badge/built-AI--first-8a63d2?style=flat-square)
 
 <img src="docs/screenshot-mkt.png" alt="os-bloom MKT tab: equity indexes, world bonds, macro calendar and headlines" width="900">
 
@@ -137,24 +144,6 @@ itself to:
   hosted deployment is exactly the abuse the terms exist to prevent.
 - **Headlines are titles and links only**, straight from public RSS. No article
   text is stored or served.
-
-## Why no brokerage integration?
-
-Because it was tried, and it earned nothing.
-
-An optional Interactive Brokers path shipped early on: an OAuth gateway behind
-a Protocol, per-symbol fallback, the lot. On inspection it delivered no
-advantage. Its equity quotes were flagged *delayed* — exactly like the free
-Yahoo ones it replaced — so the reward for a funded brokerage account, OAuth
-1.0a keys and a pile of PEM files was delayed data swapped for delayed data.
-Its bond path required a `quote_type: yield` instrument that no shipped config
-ever set, so it was unreachable. Meanwhile it threaded an `ibkr` parameter
-through fetcher signatures, the scheduler and the tests, where every
-contributor had to read past it forever.
-
-So it's gone, and the promise has no footnote: **no paid data, no API keys
-beyond a free FRED one, no brokerage account, ever.** If you want live
-execution-grade quotes, you want your broker's own terminal — not this.
 
 ## Configuration
 
