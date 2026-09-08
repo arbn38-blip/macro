@@ -1,6 +1,5 @@
 <div align="center">
 
-# os-bloom
 
 **A self-hosted macro and markets terminal that runs entirely on free data
 sources — built AI-first.**
@@ -8,10 +7,6 @@ sources — built AI-first.**
 No Bloomberg seat, no paid vendors, no brokerage account —
 one free FRED API key is the only credential you need.
 
-Written largely by AI agents, directed and reviewed by a human. That is the
-point rather than a disclaimer: os-bloom is both a working terminal and an
-experiment in how far AI-assisted development carries a real system — one with
-live upstreams, awkward data, and decisions that have to be defended.
 
 [![License](https://img.shields.io/badge/license-MIT-f5a623?style=flat-square)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.12+-5f9ea0?style=flat-square)
